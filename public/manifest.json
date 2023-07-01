@@ -1,0 +1,25 @@
+{
+  "short_name": "CEAT Tyres",
+  "name": "WebApp",
+  "icons": [
+    {
+      "src": "jlogo.png",
+      "sizes": "200x54",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "jlogo.png",
+      "type": "image/png",
+      "sizes": "200x54"
+    },
+    {
+      "src": "jlogo.png",
+      "type": "image/png",
+      "sizes": "200x54"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
