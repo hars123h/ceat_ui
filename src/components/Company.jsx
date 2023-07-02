@@ -14,6 +14,7 @@ import company4 from '../images/asml/company4.jpg'
 import ceat_company1 from '../images/asml/ceat_company1.jpg';
 import ceat_company2 from '../images/asml/ceat_company2.jpg';
 import ceat_company3 from '../images/asml/ceat_company3.jpg';
+import company_image from '../images/asml/boat/company_image.jpg';
 
 const Company = () => {
     const navigate = useNavigate();
@@ -45,73 +46,45 @@ const Company = () => {
 
                 <div className="hp_company mt-4">
                     <div className='font-semibold'>(about us)</div>
-                    <img src={ceat_company1} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={320} />
+                    <img src={company_image} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={320} />
                 </div>
 
                 <div className="flex flex-col gap-2 px-2  py-2 mt-1 rounded-md w-full mx-auto">
                     {/* <div className='font-semibold'>CEAT</div> */}
                     <div className='text-[16px] font-semibold'>
-                        Mumbai head-quartered CEAT, the flagship company of the RPG Enterprises, 
-                        was established in 1958. Today, CEAT is one of Indiaâ€™s leading tyre manufacturers
-                        and has strong presence in global markets. CEAT produces over 15 million tyres a year
-                        and offers the widest range of tyres to all segments and manufactures world-class
-                        radials for: heavy-duty trucks and buses, light commercial vehicles, earthmovers, 
-                        forklifts, tractors, trailers, cars, motorcycles and scooters as well as auto-rickshaws.
-                        <br />
-                        <br />
-                        RPG Enterprises is one of India's largest industrial conglomerates. With over 15 companies 
-                        in its fold, the group has a strong presence across core business sectors such as Infrastructure,
-                        Tyre, IT and Specialty.
-                        <div className="hp_company mt-4">
-                            <div className="font-semibold">(about us)</div>
-                            <img src={ceat_company2} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={320} />
-                        </div>
-                        <br />
-                        CEAT AKKHAN LTD&nbsp;is a joint venture company of CEAT Ltd (India) and A.K. KHAN Co. Ltd. (Bangladesh). 
-                        We are setting up a state of the art tyre manufacturing facility in Bangladesh. It is the largest investment, 
-                        in manufacturing sector, by any Indian company in Bangladesh with an investment value of BDT 424 Cr. Presently 
-                        we have a strong presence in Bangladesh market with four regional offices in Dhaka, Chattogram, Bogura and 
-                        Jashore.
-                        <div className="hp_company mt-4">
-                            <div className="font-semibold">(values)</div>
-                            <img src={ceat_company3} alt="hp" className='sm:w-3/6 md:w-2/6 mx-auto' width={320} />
-                        </div>
-                        Since its inception, CEAT has been governed by its core values. They shape the culture and define the 
-                        character of our company. They guide how we behave and make decisions.
+                        <p>BoAt (company)<br />
+                            BoAt is an India-based consumer electronics brand established in 2015 that markets earphones, headphones stereos, travel chargers and premium rugged cables. Imagine Marketing Services Private Limited, which does business as BoAt, was incorporated in November 2013 by co-founders Sameer Ashok Mehta and Aman Gupta.</p>
+
+                        <p>OVERVIEW<br />
+                            STRUCTURED DATA<br />
+                            ISSUES<br />
+                            CONTRIBUTORS<br />
+                            ACTIVITY<br />
+                            BoAt (legal name &quot;Imagine Marketing Services Pvt. Ltd.&quot;) is an India-based company which was incorporated in November 2013. BoAt markets earphones, headphones stereos, travel chargers, and premium rugged cables.</p>
+
+                        <p>Products and brands<br />
+                            BoAt designs and markets a variety of audio-focused consumer electronics, including wireless earbuds, wired headphones, wireless speakers, home audio equipment, smart watches, and an assortment of mobile phone accessories.</p>
+
+                        <p>Wireless earbuds<br />
+                            BoAt distributes a line of wireless earbuds under the brand name Airdopes. As of mid-2020, the manufacturers suggested retail price (MSRP) for BoAt&#39;s Airdopes line ranges from ₹3,999 (approx. $53) to ₹6,999 (~$92).</p>
+
+                        <p>Airdopes 431 wireless earbuds<br />
+                            Airdopes 431 wireless earbuds</p>
+
+                        <p><br />
+                            Like competing brands and models of wireless earbuds, BoAt&#39;s Airdopes line features Bluetooth connectivity, which enables truly wireless use, as well as carrying cases that include built-in batteries to charge the wireless earbuds when not in use.</p>
+
+                        <p>Tethered wireless earbuds<br />
+                            BoAt distributes a line of teathered wireless earbuds under its Rockerz and BoAt brands. As of mid-2020, the undiscounted MSRP of BoAt&#39;s tethered wireless earbud offerings range from ₹2,990 ($39) to ₹4,990 ($66).</p>
+
+
                     </div>
-                    {/* <img src={lenskart_logo} alt="spacex" /> */}
+
                 </div>
 
-                {/* <div className="flex flex-col gap-2 px-2  py-2 mt-4 rounded-md w-full mx-auto">
-                    <div className='font-semibold'>Our Manufacturing Ethos</div>
-                    <div className='text-xs'>
-                        Our quality towers tall because of the solid foundation our manufacturing operations offer.
-                        With ISO 9001:2015 certified plants – two in Maharashtra, in Ratnagiri and Urse; and a third in
-                        Masar, Gujarat. Every plant has been instrumental in helping us deliver quality and reliable products
-                        across the country. With every employee on the floor aligned to the bigger picture, holding themselves
-                        personally accountable for the output, and the reputation we enjoy out in the world.
 
-                        Our flagship facility in Ratnagiri, spread over 650 acres, consists of an open sea cryogenic jetty
-                        and storage facility to receive raw materials, a PVC resin manufacturing facility in technical
-                        collaboration with Uhde GmbH, Germany, with Hoechst technology, and a PVC pipe manufacturing facility.
-                        In house resin manufacture ensures that all our pipe manufacturing facilities in all locations
-                        receive a dedicated supply of consistent and superior quality resin. But the thing that really
-                        drives our machines across all plants, is the ethos we share. Our common passion for quality.
-                    </div>
-                    
-                </div> */}
 
-                {/* <div className="flex flex-col gap-2 px-2  py-2 mt-4 rounded-md w-full mx-auto">
-                    <div className='font-semibold'>A Network of Trust</div>
-                    <div className='text-xs'>
-                        We have over 900 dealers and 21,000 retail touchpoints across the country. Many of the people in this
-                        network have been with us for over 30 years, as members of our parivaar, our family. Over the decades,
-                        we have earned their trust, and they, ours, as families do. Their faith in us has, in turn, inspired their
-                        customers, many of whom swear by our products. Creating a beautifully interwoven tapestry of partnerships.
-                        An interconnected network of collaboration and trust, that is as enduring as the pipes and fittings.
-                    </div>
-                    
-                </div> */}
+
             </div>
 
 

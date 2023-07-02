@@ -39,7 +39,7 @@ import my4 from '../images/asml/my4.png';
 import my5 from '../images/asml/my5.png';
 import jio from '../images/asml/jio.png';
 import jlogo from '../images/asml/jlogo.jpg';
-
+import boat_logo from '../images/asml/boat/boat_logo.jpg';
 import account_record from '../images/asml/account_record.png';
 import personal_information from '../images/asml/personal_information.png';
 import ceat_company from '../images/asml/ceat_company.png';
@@ -292,7 +292,7 @@ const Mine = () => {
 
       <div className="flex flex-col bg-white gap-1">
         <div className='flex  justify-start items-center p-3 mt-2 ml-3'>
-          <img src={jlogo} alt="wind_login" width={75} className="bg-white py-2  rounded-full" />
+          <img src={boat_logo} alt="wind_login" width={75} className="bg-white py-2  rounded-full" />
           <div className='text-[26px] ml-6'>{mobileno}
             {/* <span className='border border-red-700 px-1 text-red-700 rounded-xl text-xs'>LV0</span> */}
           </div>

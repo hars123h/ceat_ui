@@ -23,40 +23,36 @@ import slide6 from '../images/asml/slide6.jpg';
 import slide7 from '../images/asml/slide7.png';
 import slide8 from '../images/asml/slide8.png';
 import ceat_slide from '../images/asml/ceat_slide.jpg';
-
+import boat_logo from '../images/asml/boat/boat_logo.jpg';
+import boat_slide1 from '../images/asml/boat/boat_slide1.png';
+import boat_slide2 from '../images/asml/boat/boat_slide2.png';
+import boat_slide3 from '../images/asml/boat/boat_slide3.png';
+import boat_slide4 from '../images/asml/boat/boat_slide4.png';
 
 const Slider = () => {
   return (
     <div className='sm:w-3/5 lg:w-3/5 mx-1 py-1'>
-      <div className='w-full'>
-          <img src={ceat_slide} className="h-[150px] w-full" alt="img_2" />
-        </div>
-        {/* <Carousel showThumbs={false} autoPlay showArrows={true} infiniteLoop> */}
-        {/* <div>
-          <img src={ceat_slide} className="h-[140px]" alt="img_2" />
+        {/* <div className='w-full'>
+          <img src={boat_logo} className="h-[180px] w-full" alt="img_2" />
         </div> */}
-
-        {/* <div>
-          <img src={slide4} className="h-[180px]" alt="img_2" />
-        </div> */}
-
-        {/* <div>
-          <img src={lenscart_slide2} className="h-[180px]" alt="img_2" />
+        <Carousel showThumbs={false} autoPlay showArrows={true} infiniteLoop statusFormatter={()=>''}>
+        <div>
+          <img src={boat_slide1} className="h-[200px]" alt="img_2" />
         </div>
 
         <div>
-          <img src={lenscart_slide3} className="h-[180px]" alt="img_1" />
+          <img src={boat_slide2} className="h-[200px]" alt="img_1" />
         </div>
 
         <div>
-          <img src={lenscart_slide4} className="h-[180px]" alt="img_1" />
+          <img src={boat_slide3} className="h-[200px]" alt="img_1" />
         </div>
 
         <div>
-          <img src={lenscart_slide5} className="h-[180px]" alt="img_1" />
-        </div> */}
+          <img src={boat_slide4} className="h-[200px]" alt="img_1" />
+        </div>
 
-      {/* </Carousel> */}
+      </Carousel>
     </div>
   )
 }

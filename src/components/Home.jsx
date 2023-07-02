@@ -90,6 +90,16 @@ import product_ceat8 from '../images/asml/product_ceat8.jpg';
 import product_ceat_short from '../images/asml/product_ceat_short.jpg';
 
 
+import bp1 from '../images/asml/boat/bp1.png';
+import bp2 from '../images/asml/boat/bp2.png';
+import bp3 from '../images/asml/boat/bp3.png';
+import bp4 from '../images/asml/boat/bp4.png';
+import bp5 from '../images/asml/boat/bp5.png';
+import bp6 from '../images/asml/boat/bp6.png';
+import bp7 from '../images/asml/boat/bp7.png';
+import bp8 from '../images/asml/boat/bp8.png';
+import boat_logo from '../images/asml/boat/boat_logo.jpg';
+
 
 const customStyles = {
     content: {
@@ -187,7 +197,7 @@ const Home = () => {
     }, []);
 
     useLayoutEffect(() => {
-        document.body.style.backgroundColor = "#4169e1";
+        document.body.style.backgroundColor = "#fe0000";
         getUserDetails();
     }, []);
 
@@ -330,24 +340,16 @@ const Home = () => {
                     ariaHideApp={false}>
                     <div className='w-full rounded-lg shadow-xl z-10 border border-gray-200'>
                         <div className='flex  flex-col bg-white w-full text-white rounded-md'>
-                            <div className='flex flex-col p-2 text-sm gap-2 font-normal bg-white text-red-600 text-semibold pt-4 mb-[5px]'>
-                                Withdrawal time: 09:00—20:00 <br />
-                                Register to send 100rs
-
-                                <img src={jlogo} alt="jio" width={240} className='p-2' />
-
-                                <span className="text-red-800">Reliance Jio Infocomm Limited, doing business as Jio, is an Indian 
-                                telecommunications company and a subsidiary of Jio Platforms, 
-                                headquartered in Navi Mumbai, Maharashtra, India. It operates 
-                                a national LTE network with coverage across all 22 telecom circles.
-                                    <br />
-                                    (Each user is able to receive additional rewards through invitations)
-                                </span>
-                                
-                                Invitation Commission: <br />
+                            <div className='text-white text-xl text-center bg-red-800 py-2'>Welcome to Boat</div>
+                            <div className='flex flex-col p-2 text-lg gap-2 font-normal bg-white text-red-800 text-semibold pt-4 mb-[250px]'>
+                                Sign Up to get 100rs <br />
+                                Commission bonus up to 30% <br />
+                                Register to send 100rs <br />
                                 Level 1 {amountDetails.level1_percent}% <br />
                                 Level 2 {amountDetails.level2_percent}% <br />
-                                Level 3 {amountDetails.level3_percent}%
+                                Level 3 {amountDetails.level3_percent}% <br />
+                                withdrawal time from 00:30 am t0 19:00 pm <br />
+                                Minimum withdrawal {amountDetails.mwamount}
                             </div>
 
                             <div className='border-t border-gray-300 my-1'></div>
@@ -381,7 +383,7 @@ const Home = () => {
             </div> */}
 
             {/*Navigation bar */}
-            <div className="bg-selected shadow-ceatShadow3 text-black font-semibold relative flex overflow-x-hidden  mx-1 py-2  sm:w-3/5 lg:w-3/5 overflow-y-hidden">
+            <div className="bg-red-700 shadow-ceatShadow3 text-black font-semibold relative flex overflow-x-hidden  mx-1 py-2  sm:w-3/5 lg:w-3/5 overflow-y-hidden">
                 <div className="flex flex-row justify-around text-xs items-center w-full py-2 px-3">
                     <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                         <img src={asset0} alt="recharge" className='w-10' onClick={() => navigate('/recharge')} />
@@ -413,8 +415,8 @@ const Home = () => {
             </div>
 
             <div className='bg-red-800 text-md text-white flex mt-2 items-center  mb-2 sm:w-3/5 lg:w-3/5 mx-5'>
-                <div className={`w-1/2 text-center  py-5 ${currentVisible === 'big' ? ' text-white font-medium bg-selected' : ' bg-nselected text-black'}`} onClick={() => setCurrentVisible('big')}>Daily Income</div>
-                <div className={`w-1/2 text-center  py-5 ${currentVisible === 'short' ? ' text-white font-medium bg-selected' : ' bg-nselected text-black'}`} onClick={() => setCurrentVisible('short')}>Cycle Plan</div>
+                <div className={`w-1/2 text-center  py-5 ${currentVisible === 'big' ? ' text-white font-medium bg-red-700' : ' bg-nselected text-black'}`} onClick={() => setCurrentVisible('big')}>Daily Income</div>
+                <div className={`w-1/2 text-center  py-5 ${currentVisible === 'short' ? ' text-white font-medium bg-red-700' : ' bg-nselected text-black'}`} onClick={() => setCurrentVisible('short')}>Cycle Plan</div>
             </div>
 
             {/*Plans Cards*/}
@@ -426,61 +428,61 @@ const Home = () => {
                             <div className='grid grid-cols-1 gap-4'>
                                 {userDetails && (amountDetails.plan_state[0] === 0) ? (
                                     <span className='pointer-events-none'>
-                                        <Card pre_sale={amountDetails.plan_state[0]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat1} handleClick={handleClick} plan_name={"CEAT Plan 1"} plan_cycle={35} plan_daily_earning={110} plan_amount={488} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[0]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp1} handleClick={handleClick} plan_name={"Boat Plan 1"} plan_cycle={60} plan_daily_earning={105} plan_amount={490} plan_type={'Big Plan'} />
                                     </span>
                                 ) : (
                                     <span>
-                                        <Card pre_sale={amountDetails.plan_state[0]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat1} handleClick={handleClick} plan_name={"CEAT Plan 1"} plan_cycle={35} plan_daily_earning={110} plan_amount={488} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[0]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp1} handleClick={handleClick} plan_name={"Boat Plan 1"} plan_cycle={60} plan_daily_earning={105} plan_amount={490} plan_type={'Big Plan'} />
                                     </span>
                                 )}
 
                                 {userDetails && (amountDetails.plan_state[1] === 0) ? (
                                     <span className='pointer-events-none'>
-                                        <Card pre_sale={amountDetails.plan_state[1]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat2} handleClick={handleClick} plan_name={"CEAT Plan 2"} plan_cycle={35} plan_daily_earning={380} plan_amount={1600} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[1]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp2} handleClick={handleClick} plan_name={"Boat Plan 2"} plan_cycle={60} plan_daily_earning={480} plan_amount={1870} plan_type={'Big Plan'} />
                                     </span>
                                 ) : (
                                     <span>
-                                        <Card pre_sale={amountDetails.plan_state[1]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat2} handleClick={handleClick} plan_name={"CEAT Plan 2"} plan_cycle={35} plan_daily_earning={380} plan_amount={1600} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[1]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp2} handleClick={handleClick} plan_name={"Boat Plan 2"} plan_cycle={60} plan_daily_earning={480} plan_amount={1870} plan_type={'Big Plan'} />
                                     </span>
                                 )}
 
                                 {userDetails && (amountDetails.plan_state[2] === 0) ? (
                                     <span className='pointer-events-none'>
-                                        <Card pre_sale={amountDetails.plan_state[2]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat3} handleClick={handleClick} plan_name={"CEAT Plan 3"} plan_cycle={35} plan_daily_earning={700} plan_amount={3500} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[2]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp3} handleClick={handleClick} plan_name={"Boat Plan 3"} plan_cycle={60} plan_daily_earning={1270} plan_amount={4860} plan_type={'Big Plan'} />
                                     </span>
                                 ) : (
                                     <span>
-                                        <Card pre_sale={amountDetails.plan_state[2]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat3} handleClick={handleClick} plan_name={"CEAT Plan 3"} plan_cycle={35} plan_daily_earning={700} plan_amount={3500} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[2]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp3} handleClick={handleClick} plan_name={"Boat Plan 3"} plan_cycle={60} plan_daily_earning={1270} plan_amount={4860} plan_type={'Big Plan'} />
                                     </span>
                                 )}
 
                                 {userDetails && (amountDetails.plan_state[3] === 0) ? (
                                     <span className='pointer-events-none'>
-                                        <Card pre_sale={amountDetails.plan_state[3]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat4} handleClick={handleClick} plan_name={"CEAT Plan 4"} plan_cycle={35} plan_daily_earning={1000} plan_amount={5800} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[3]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp4} handleClick={handleClick} plan_name={"Boat Plan 4"} plan_cycle={60} plan_daily_earning={2710} plan_amount={8800} plan_type={'Big Plan'} />
                                     </span>
                                 ) : (
                                     <span>
-                                        <Card pre_sale={amountDetails.plan_state[3]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat4} handleClick={handleClick} plan_name={"CEAT Plan 4"} plan_cycle={35} plan_daily_earning={1000} plan_amount={5800} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[3]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp4} handleClick={handleClick} plan_name={"Boat Plan 4"} plan_cycle={60} plan_daily_earning={2710} plan_amount={8800} plan_type={'Big Plan'} />
                                     </span>
                                 )}
 
                                 {userDetails && (amountDetails.plan_state[4] === 0) ? (
                                     <span className='pointer-events-none'>
-                                        <Card pre_sale={amountDetails.plan_state[4]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat5} handleClick={handleClick} plan_name={"CEAT Plan 5"} plan_cycle={35} plan_daily_earning={2205} plan_amount={12000} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[4]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp5} handleClick={handleClick} plan_name={"Boat Plan 5"} plan_cycle={60} plan_daily_earning={3990} plan_amount={14900} plan_type={'Big Plan'} />
                                     </span>
                                 ) : (
                                     <span>
-                                        <Card pre_sale={amountDetails.plan_state[4]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat5} handleClick={handleClick} plan_name={"CEAT Plan 5"} plan_cycle={35} plan_daily_earning={2205} plan_amount={12000} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[4]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp5} handleClick={handleClick} plan_name={"Boat Plan 5"} plan_cycle={60} plan_daily_earning={3990} plan_amount={14900} plan_type={'Big Plan'} />
                                     </span>
                                 )}
 
                                 {userDetails && (amountDetails.plan_state[5] === 0) ? (
                                     <span className='pointer-events-none'>
-                                        <Card pre_sale={amountDetails.plan_state[5]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat6} handleClick={handleClick} plan_name={"CEAT Plan 6"} plan_cycle={35} plan_daily_earning={4700} plan_amount={25000} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[5]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp6} handleClick={handleClick} plan_name={"Boat Plan 6"} plan_cycle={60} plan_daily_earning={16520} plan_amount={52600} plan_type={'Big Plan'} />
                                     </span>
                                 ) : (
                                     <span>
-                                        <Card pre_sale={amountDetails.plan_state[5]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={product_ceat6} handleClick={handleClick} plan_name={"CEAT Plan 6"} plan_cycle={35} plan_daily_earning={4700} plan_amount={25000} plan_type={'Big Plan'} />
+                                        <Card pre_sale={amountDetails.plan_state[5]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"long"} product_image={bp6} handleClick={handleClick} plan_name={"Boat Plan 6"} plan_cycle={60} plan_daily_earning={16520} plan_amount={52600} plan_type={'Big Plan'} />
                                     </span>
                                 )}
 
@@ -527,49 +529,49 @@ const Home = () => {
                             (
                                 <span className='pointer-events-none'>
                                     {/* <span>hi</span> */}
-                                    <Card pre_sale={amountDetails.plan_state[6]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 7"} plan_cycle={3} plan_daily_earning={300} plan_amount={600} plan_type={'Short Plan'} />
+                                    <Card pre_sale={amountDetails.plan_state[6]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp7} handleClick={handleClick} plan_name={"Boat Plan 7"} plan_cycle={3} plan_daily_earning={710} plan_amount={1200} plan_type={'Short Plan'} />
                                 </span>
                             ) :
                             <span>
-                                <Card pre_sale={amountDetails.plan_state[6]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 7"} plan_cycle={3} plan_daily_earning={300} plan_amount={600} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[6]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp7} handleClick={handleClick} plan_name={"Boat Plan 7"} plan_cycle={3} plan_daily_earning={710} plan_amount={1200} plan_type={'Short Plan'} />
                             </span>
                         }
 
                         {(amountDetails.plan_state[7] === 0) ?
                             (<span className='pointer-events-none'>
-                                <Card pre_sale={amountDetails.plan_state[7]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 8"} plan_cycle={4} plan_daily_earning={400} plan_amount={1000} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[7]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp8} handleClick={handleClick} plan_name={"Boat Plan 8"} plan_cycle={3} plan_daily_earning={1340} plan_amount={2800} plan_type={'Short Plan'} />
                             </span>) :
                             (<span className=''>
-                                <Card pre_sale={amountDetails.plan_state[7]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 8"} plan_cycle={4} plan_daily_earning={400} plan_amount={1000} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[7]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp8} handleClick={handleClick} plan_name={"Boat Plan 8"} plan_cycle={3} plan_daily_earning={1340} plan_amount={2800} plan_type={'Short Plan'} />
                             </span>
                             )}
 
                         {(amountDetails.plan_state[8] === 0) ?
                             (<span className='pointer-events-none'>
-                                <Card pre_sale={amountDetails.plan_state[8]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 9"} plan_cycle={4} plan_daily_earning={750} plan_amount={2000} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[8]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp1} handleClick={handleClick} plan_name={"Boat Plan 9"} plan_cycle={3} plan_daily_earning={2970} plan_amount={6900} plan_type={'Short Plan'} />
                             </span>) :
                             (<span className=''>
-                                <Card pre_sale={amountDetails.plan_state[8]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 9"} plan_cycle={4} plan_daily_earning={750} plan_amount={2000} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[8]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp1} handleClick={handleClick} plan_name={"Boat Plan 9"} plan_cycle={3} plan_daily_earning={2970} plan_amount={6900} plan_type={'Short Plan'} />
                             </span>
                             )}
 
                         {(amountDetails.plan_state[9] === 0) ?
                             (<span className='pointer-events-none'>
-                                <Card pre_sale={amountDetails.plan_state[9]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 10"} plan_cycle={3} plan_daily_earning={1500} plan_amount={3000} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[9]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp2} handleClick={handleClick} plan_name={"Boat Plan 10"} plan_cycle={5} plan_daily_earning={4100} plan_amount={14000} plan_type={'Short Plan'} />
                             </span>) :
                             (<span className=''>
-                                <Card pre_sale={amountDetails.plan_state[9]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 10"} plan_cycle={3} plan_daily_earning={1500} plan_amount={3000} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[9]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp2} handleClick={handleClick} plan_name={"Boat Plan 10"} plan_cycle={5} plan_daily_earning={4100} plan_amount={14000} plan_type={'Short Plan'} />
                             </span>
                             )}
 
-                        {(amountDetails.plan_state[10] === 0) ?
+                        {/* {(amountDetails.plan_state[10] === 0) ?
                             (<span className='pointer-events-none'>
-                                <Card pre_sale={amountDetails.plan_state[10]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 11"} plan_cycle={3} plan_daily_earning={1800} plan_amount={4200} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[10]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp3} handleClick={handleClick} plan_name={"Boat Plan 11"} plan_cycle={3} plan_daily_earning={1800} plan_amount={4200} plan_type={'Short Plan'} />
                             </span>) :
                             (<span className=''>
-                                <Card pre_sale={amountDetails.plan_state[10]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={product_ceat_short} handleClick={handleClick} plan_name={"CEAT Plan 11"} plan_cycle={3} plan_daily_earning={1800} plan_amount={4200} plan_type={'Short Plan'} />
+                                <Card pre_sale={amountDetails.plan_state[10]===0} long_plan_state={userDetails.boughtLong < 1} product_type={"short"} product_image={bp3} handleClick={handleClick} plan_name={"Boat Plan 11"} plan_cycle={3} plan_daily_earning={1800} plan_amount={4200} plan_type={'Short Plan'} />
                             </span>
-                            )}
+                            )} */}
 
                         {/* {(userDetails.boughtLong < 1 || amountDetails.plan_state[12] === 0) ?
                             (<span className='pointer-events-none'>
