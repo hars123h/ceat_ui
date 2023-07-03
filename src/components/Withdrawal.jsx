@@ -33,7 +33,7 @@ const Withdrawal = () => {
     const amountDetails = useContext(AmountContext)
     const [otp, setOtp] = useState('');
     const [otpfield, setOTPfield] = useState('');
-    const [balance, setBalance] = useState();
+    const [balance, setBalance] = useState(0);
     const [wpassword, setWpassword] = useState('');
     const [wamount, setWamount] = useState(0);
     const [diffDays, setDiffDays] = useState(0);

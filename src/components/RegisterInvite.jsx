@@ -19,6 +19,7 @@ import lenskart_logo from '../images/lenskart_logo.png';
 import jio from '../images/asml/jio.png';
 import jlogo from '../images/asml/jlogo.jpg';
 import boat_logo from '../images/asml/boat/boat_logo.jpg';
+import register_logo from '../images/asml/boat/register_logo.jpg';
 
 
 
@@ -56,6 +57,8 @@ const Register = () => {
         document.body.style.backgroundColor = "#fe0000";
     },[]);
 
+    const validatePassword = password => /[a-zA-Z]/.test(password) && /[0-9!@#$%^&*(),.?":{}|<>]/.test(password);
+
     const handleRegister = async () => {
 
         if (mobno.length != 10) {
@@ -72,6 +75,12 @@ const Register = () => {
             toaster('Password must contain at least 6 characters!');
             return;
         }
+
+        if(validatePassword(pwd)===false) {
+            toaster('Password must contain letters and numbers or special symbols');
+            return;
+        }
+
 
         // if (otp !== otpfield) {
         //     toaster('Wrong OTP entered!');
@@ -147,7 +156,7 @@ const Register = () => {
             <div className='flex-grow font-[400]'>Register</div>
         </div>
         <div className='text-center'>
-            <img src={boat_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-10 mb-2 ' width={"70%"} />
+            <img src={register_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-10 mb-2 ' width={"70%"} />
         </div>
         <div  className="bg-white box mb-20 shadow-ceatShadow2  gap-2 m-auto  rounded-xl lg:w-2/5 w-[88%]  p-4 w-50% flex flex-col">
             <div className='outline-none flex items-center justify-between mb-2  rounded-full border border-gray-200'>

@@ -312,18 +312,18 @@ const Home = () => {
                     ariaHideApp={false}
                 >
 
-                    <div className='relative bg-white p-2 w-full rounded-sm '>
+                    <div className='relative bg-white p-4 w-full rounded-sm '>
                         <div
                             onClick={() => closeModal('cancel')}
                             className='absolute  right-[-10px] top-[-10px] bg-white font-extrabold  w-10 h-10 text-white  flex justify-center items-center rounded-full'>
                             <div className='bg-slate-500 w-7 h-7 rounded-full text-center text-xl'>
-                                X
+                            &#x2715;
                             </div>
                         </div>
                         <div>
-                            <h1 className='text-gray-600 mb-3 mt-2 text-md mr-5 font-semibold'>Are you sure you want to buy this plan?</h1>
+                            <h1 className='text-gray-600 mb-3 mt-2 text-[14px] mr-5 font-semibold'>Are you sure you want to buy this plan?</h1>
 
-                            <div className='flex justify-end pt-4'>
+                            <div className='flex justify-end pt-4 text-[14px]'>
                                 <button onClick={() => closeModal('ok')} className='bg-red-800 text-white px-2 py-1   w-[64px]'>Yes</button>
                                 <button onClick={() => closeModal('cancel')} className='border border-gray-300  px-2 py-1   w-[64px] ml-2'>No</button>
                             </div>
@@ -341,15 +341,15 @@ const Home = () => {
                     <div className='w-full rounded-lg shadow-xl z-10 border border-gray-200'>
                         <div className='flex  flex-col bg-white w-full text-white rounded-md'>
                             <div className='text-white text-xl text-center bg-red-800 py-2'>Welcome to Boat</div>
-                            <div className='flex flex-col p-2 text-lg gap-2 font-normal bg-white text-red-800 text-semibold pt-4 mb-[250px]'>
-                                Sign Up to get 100rs <br />
+                            <div className='flex flex-col p-2 text-lg gap-2 font-normal bg-white text-red-800 text-semibold pt-4 mb-[180px]'>
+                                Sign Up to get 50rs <br />
                                 Commission bonus up to 30% <br />
                                 Register to send 100rs <br />
-                                Level 1 {amountDetails.level1_percent}% <br />
-                                Level 2 {amountDetails.level2_percent}% <br />
-                                Level 3 {amountDetails.level3_percent}% <br />
+                                Level 1 22%<br />
+                                Level 2 2%<br />
+                                Level 3 1%<br />
                                 withdrawal time from 00:30 am t0 19:00 pm <br />
-                                Minimum withdrawal {amountDetails.mwamount}
+                                Minimum withdrawal 150rs
                             </div>
 
                             <div className='border-t border-gray-300 my-1'></div>

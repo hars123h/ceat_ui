@@ -20,7 +20,7 @@ import tuborg_logo from '../images/tuborg_logo.svg';
 import jio from '../images/asml/jio.png';
 import jlogo from '../images/asml/jlogo.jpg';
 import boat_logo from '../images/asml/boat/boat_logo.jpg';
-
+import register_logo from '../images/asml/boat/register_logo.jpg';
 
 
 const Register = () => {
@@ -53,6 +53,8 @@ const Register = () => {
         document.body.style.backgroundColor = "#fe0000";
     }, []);
 
+    const validatePassword = password => /[a-zA-Z]/.test(password) && /[0-9!@#$%^&*(),.?":{}|<>]/.test(password);
+
     const handleRegister = async () => {
 
         if (mobno.length != 10) {
@@ -67,6 +69,11 @@ const Register = () => {
 
         if (pwd.length < 6) {
             toaster('Password must contain at least 6 characters!');
+            return;
+        }
+
+        if(validatePassword(pwd)===false) {
+            toaster('Password must contain letters and numbers or special symbols');
             return;
         }
 
@@ -126,15 +133,15 @@ const Register = () => {
     return (
         <div className='relative bg-[#fe0000]'>
         {toasterShow ? <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-            <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
+            <div className='flex gap-2 items-center justify-center bg-black py-[10px] px-4  rounded-[4px] opacity-80 text-white '>
                 <div>{toasterText}</div>
             </div>
         </div> : null}
-        {loading ? <div className='flex gap-2 bg-black text-white py-2 px-2  rounded-md opacity-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        {loading ? <div className='flex gap-2 items-center justify-center bg-black text-white py-[10px] px-4  rounded-[4px] opacity-80 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
             {text === 'Loading' ? <div>
-                <RotatingLines strokeColor='white' width='20' />
+                <RotatingLines strokeColor='white' width='16' />
             </div> : null}
-            <div className='text-sm'>{text}</div>
+            <div className='text-[16px]'>{text}</div>
         </div> : null}
         <div className='flex items-center text-center bg-red-800 font-sans text-white pt-2 text-lg pb-2'> 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 absolute left-2 opacity-50 cursor-pointer hover:bg-white hover:stroke-black hover:rounded-full transition rounded-full ease-in-out delay-150 duration-200">
@@ -143,7 +150,7 @@ const Register = () => {
             <div className='flex-grow font-[400]'>Register</div>
         </div>
         <div className='text-center'>
-            <img src={boat_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-4 mb-2 ' width={"50%"} />
+            <img src={register_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-4 mb-2 ' width={"50%"} />
         </div>
         <div  className="bg-white box mb-20   gap-2 m-auto  rounded-xl lg:w-2/5 w-[88%] shadow-ceatShadow2  p-4 w-50% flex flex-col">
             <div className='outline-none flex items-center justify-between mb-2  rounded-full border border-gray-200'>

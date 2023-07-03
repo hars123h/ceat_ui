@@ -79,4 +79,11 @@ background: linear-gradient(0deg, rgba(253,173,2,1) 0%, rgba(249,146,0,1) 35%, r
     align-self: center;
 
   }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
   

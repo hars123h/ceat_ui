@@ -82,7 +82,7 @@ const Invite = () => {
                 <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col rounded-2xl bg-white text-black font-bold mt-5">
                     <div className='font-bold text-sm'>Invitation Link</div>
                     <div className='py-1 px-1 text-xs rounded-md border overflow-hidden border-red-800 mt-2'>{`https://ceat-ui.vercel.app/register/invite_code/${userDetails.user_invite}`}</div>
-                    <CopyToClipboard text={`https://ceat-ui.vercel.app/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('Copied to clipboard')}>
+                    <CopyToClipboard text={`https://ceat-ui.vercel.app/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('copy success')}>
                         <span className='w-[80px] text-sm text-center bg-red-800 text-white p-2'>copy</span>
                     </CopyToClipboard>
                 </div>
@@ -90,7 +90,7 @@ const Invite = () => {
                 <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col rounded-2xl bg-white text-black font-bold mt-5">
                     <div className='font-bold text-sm'>Invitation code</div>
                     <div className='py-1 px-1 text-xs rounded-md border border-red-800 mt-2'>{userDetails.user_invite}</div>
-                    <CopyToClipboard text={userDetails.user_invite} onCopy={() => toaster('Copied to clipboard')}>
+                    <CopyToClipboard text={userDetails.user_invite} onCopy={() => toaster('copy success')}>
                         <span className='w-[80px] text-sm text-center bg-red-800 text-white p-2'>copy</span>
                     </CopyToClipboard>
                 </div>
