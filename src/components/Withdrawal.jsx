@@ -69,7 +69,7 @@ const Withdrawal = () => {
             const docRef = await axios.post(`${BASE_URL}/get_user`, {user_id: localStorage.getItem('uid')}).then(({data})=>data);
             if (docRef) {
                 if (docRef.bank_details.bankAccount.length===0) {
-                    toaster('Fill bank details first!', '/bank');
+                    toaster('Unbound bank card, go to bind!', '/bank');
                 } else {
                     setDetails(docRef.bank_details);
                     docRef.balance ? setBalance(docRef.balance) : setBalance(0);
@@ -220,17 +220,17 @@ const Withdrawal = () => {
                     className="w-5 h-5   storke-white  cursor-pointer stroke-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
-                <div className='flex-grow'>Withdraw</div>
+                <div className='flex-grow'>withdraw</div>
             </div>
 {/*| After Deduction} | Rs.{(Number(wamount) - (Number(amountDetails.withdrawal_fee) * Number(wamount) / 100))}*/}
             <div className="part1 bg-white p-3 rounded-lg mx-3 mt-5">
-                <div className='text-red-800 px-2 my-1 text-xs rounded-full border border-red-800 inline'>Tax {amountDetails.withdrawal_fee}% </div>
+                <div className='text-red-800 px-[4px] my-1 py-[2px] text-xs rounded-full border border-red-800 inline'>Tax {amountDetails.withdrawal_fee}% </div>
                 <div className='flex items-center justify-start gap-2 my-1'>
                     <div className='text-red-800 text-xl'>&#8377;</div>
                     <div className="value"> <input type="number" id="withdrawal_field" onChange={handleWithdrawalAmount} className='w-full text-xl outline-none bg-white py-2' placeholder='Amount' /></div>
                 </div>
                 <div className='flex items-center justify-start gap-4 mt-4 mb-1'>
-                    <div className="balance text-gray-400 font-semibold text-sm">Assets: &#8377; {Math.floor(balance)}</div>
+                    <div className="balance text-gray-400 font-semibold text-sm">Assets: &#8377;{Math.floor(balance)}</div>
                     <div onClick={handleWithdrawalAll} className="withdraw font-medium text-red-800 text-sm cursor-pointer">Withdraw all</div>
                 </div>
             </div>
@@ -238,12 +238,12 @@ const Withdrawal = () => {
             <div className="part1 bg-white p-4 rounded-lg mx-3 mt-5">
                 {/* #87a1c3  border-[#87a1c3]*/}
                 <div className="balance flex items-center justify-between text-gray-600 text-md p-3 border-b border-gray-200">
-                    <div className="phoneno">Phone Number:</div>
+                    <div className="phoneno text-[15px] text-gray-400">Phone Number:</div>
                     <div className='text-black text-sm'>{details.phoneNo.substring(0,3)+"****"+details.phoneNo.substring(7)}</div>
                 </div>
 
                 <div className="balance flex items-center justify-between text-gray-600 text-md p-3 border-b border-gray-200">
-                    <div className="bnkac">Bank Account:</div>
+                    <div className="bnkac text-[15px] text-gray-400">Bank Account:</div>
                     <div className='text-black text-sm'>{details.bankAccount}</div>
                 </div>
 
@@ -258,9 +258,9 @@ const Withdrawal = () => {
                 </div> */}
 
                 <div className="balance flex justify-between items-center text-gray-600 sm:text-md md:text-md p-3">
-                    <div className="wpwd w-2/3">Withdrawal Password:</div>
+                    <div className="wpwd w-2/3 text-[15px] text-gray-400">Withdrawal Password:</div>
                     <input type="password" onChange={e => setWpassword(e.target.value)} placeholder='Enter Password' 
-                    className='placeholder:text-xs outline-none bg-blue-200 w-1/3' />
+                    className='placeholder:text-xs outline-none w-1/3' />
                 </div>
 
                 {/* <div className="balance flex justify-between text-gray-600 sm:text-md md:text-xl p-3">
@@ -270,7 +270,7 @@ const Withdrawal = () => {
 
             </div>
 
-            <div className="part1 bg-white p-3 rounded-lg mx-3 mt-5 flex flex-col gap-3 text-[10px]">
+            <div className="part1 bg-white p-3 rounded-lg mx-3 mt-5 flex flex-col gap-3 text-[12px]">
                 <div className='text-red-500 font-medium'>* Withdrawal time 09:00 - 18:00</div>
                 <div className='text-red-500 font-medium'>* Minimum withdrawal amount: {amountDetails.mwamount}.</div>
                 <div className='text-red-500 font-medium'>* Correctly fill in the bank information IFSC code, payee name, bank card number, otherwise the withdrawal will fail.</div>

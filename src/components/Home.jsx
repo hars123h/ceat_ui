@@ -272,7 +272,7 @@ const Home = () => {
     return (
         <div className='relative bg-red-800 px-1'>
             {toasterShow ? <div className='w-[90%] absolute z-50 top-[500px] left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 text-center bg-black opacity-100 text-white px-4 py-1 rounded-md'>
+                <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>
                 </div>
             </div> : null}
@@ -348,7 +348,7 @@ const Home = () => {
                                 Level 1 22%<br />
                                 Level 2 2%<br />
                                 Level 3 1%<br />
-                                withdrawal time from 00:30 am t0 19:00 pm <br />
+                                withdrawal time from 00:30 am to 19:00 pm <br />
                                 Minimum withdrawal 150rs
                             </div>
 

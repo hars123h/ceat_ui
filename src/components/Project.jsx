@@ -139,7 +139,7 @@ const Project = () => {
     return (
         <div className='md:h-screen overflow-y-scroll xs:h-[700px] bg-white h-screen relative'>
             {toasterShow ? <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-                <div className='flex gap-2 bg-black opacity-100 text-white px-2 py-1 rounded-md'>
+                <div className='flex gap-2 bg-black opacity-80 text-white px-2 py-1 rounded-md'>
                     <div>{toasterText}</div>
                 </div>
             </div> : null}
