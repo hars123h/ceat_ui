@@ -390,14 +390,14 @@ const Home = () => {
                         <div className='text-[12px] text-white'>Recharge</div>
                     </div>
 
-                    <a href="https://telegram.me/jiofieberofficial" className=' no-underline  cursor-pointer'>
+                    <a href="https://telegram.me/boatofficialchannel" className=' no-underline  cursor-pointer'>
                         <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                             <img src={plane} alt="channel" className='w-10' />
                             <div className='text-[12px] text-white'>Channel</div>
                         </div>
                     </a>
 
-                    <a href="https://telegram.me/jiofieberofficial" className=' no-underline  cursor-pointer'>
+                    <a href="https://telegram.me/boatofficialchannel" className=' no-underline  cursor-pointer'>
                         <div className='cursor-pointer mx-2 flex flex-col justify-center items-center'>
                             <img src={asset2} alt="online" className='w-10' />
                             <div className='text-[12px] text-white '>Online</div>
