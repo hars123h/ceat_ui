@@ -22,6 +22,7 @@ import jio from '../images/asml/jio.png';
 import jlogo from '../images/asml/jlogo.jpg';
 import boat_logo from '../images/asml/boat/boat_logo.jpg';
 
+import register_logo from '../images/asml/boat/register_logo.jpg';
 
 
 const Login = () => {
@@ -104,7 +105,7 @@ const Login = () => {
                 <div className='text-sm'>{text}</div>
             </div> : null}
             <div className='text-center'>
-                <img src={boat_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-10 mb-14' width={270} />
+                <img src={register_logo} alt="hp_logo" className='m-auto md:w-2/6 sm:w-1/6 mt-10 mb-14' width={270} />
             </div>
             <div className='flex flex-col m-auto w-[79%]'>
                 <div className=" items-center mb-3 p-2 mx-2 phoneno flex  bg-[#f1f1f1] rounded-md ">
