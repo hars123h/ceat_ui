@@ -215,19 +215,19 @@ export default function Dashboard() {
                     <Box sx={{ backgroundColor: '#e5e7eb', padding: "20px", borderRadius: '5px', display: 'inline', width: '24%' }} className="shadow-lg">
                         <Typography variant="h3">&#8377;</Typography>
                         <Typography >Total Recharge Amount</Typography>
-                        <Typography>&#8377; {recSum}</Typography>
+                        <Typography>&#8377; {Math.floor(recSum)}</Typography>
                     </Box>
 
                     <Box sx={{ backgroundColor: '#e5e7eb', padding: "20px", borderRadius: '5px', display: 'inline', width: '24%' }} className="shadow-lg">
                         <Typography variant="h3">&#8377;</Typography>
                         <Typography >Total Withdrawal Amount</Typography>
-                        <Typography>&#8377; {witSum}</Typography>
+                        <Typography>&#8377; {Math.floor(witSum)}</Typography>
                     </Box>
 
                     <Box sx={{backgroundColor: '#e5e7eb', padding: "20px", borderRadius: '5px', display: 'inline', width: '24%' }} className="shadow-lg">
                         <Typography variant="h3">&#8377;</Typography>
                         <Typography >Total Balance Sum</Typography>
-                        <Typography  >&#8377; {balSum}</Typography>
+                        <Typography  >&#8377; {Math.floor(balSum)}</Typography>
                     </Box>
                 </Box>
 

@@ -162,8 +162,8 @@ const Withdrawal = () => {
     }
 
     const handleWithdrawalAll = () => {
-        document.getElementById('withdrawal_field').value = balance;
-        setWamount(balance);
+        document.getElementById('withdrawal_field').value = Math.floor(balance);
+        setWamount(Math.floor(balance));
     }
 
     const isBetween = () => {
