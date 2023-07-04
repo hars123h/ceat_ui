@@ -101,7 +101,7 @@ const Register = () => {
                         setLoading(false);
                     },2000);
                 } else {
-                    setText('Registration Successful!');
+                    setText('registration success');
                     localStorage.setItem('uid', data.user_id);
                     setMobno('');
                     setpwd('');
@@ -143,7 +143,7 @@ const Register = () => {
                 <div>{toasterText}</div>
             </div>
         </div> : null}
-        {loading ? <div className='flex gap-2 bg-black text-white py-2 px-2  rounded-md opacity-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        {loading ? <div className='flex gap-2 bg-black text-white py-2 px-2 mt-[5px]  rounded-md opacity-100 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
             {text === 'Loading' ? <div>
                 <RotatingLines strokeColor='white' width='20' />
             </div> : null}
