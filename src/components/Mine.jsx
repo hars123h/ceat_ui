@@ -298,7 +298,7 @@ const Mine = () => {
 
       
 
-      <div className='grid grid-cols-2 grid-rows-3 px-2 gap-2 py-3 mt-2'>
+      <div className='grid grid-cols-2 grid-rows-3 px-2 gap-1 py-3 mt-2'>
 
         <div className='flex flex-col gap-[2px] items-center bg-[#f3f3f3] py-2' >
           <div>
@@ -466,7 +466,7 @@ const Mine = () => {
 
       </div> */}
 
-      <div className='grid grid-cols-2 grid-rows-3 px-2 gap-2 py-3 mt-2'>
+      <div className='grid grid-cols-2 grid-rows-3 px-2 gap-1 py-3 mt-2'>
 
         <div className='flex flex-col gap-[2px] items-center bg-[#f3f3f3] py-2' onClick={() => navigate('/company')}>
           <div>

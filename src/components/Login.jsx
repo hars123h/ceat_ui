@@ -21,7 +21,6 @@ import lenskart_logo from '../images/lenskart_logo.png';
 import jio from '../images/asml/jio.png';
 import jlogo from '../images/asml/jlogo.jpg';
 import boat_logo from '../images/asml/boat/boat_logo.jpg';
-
 import register_logo from '../images/asml/boat/register_logo.jpg';
 
 
@@ -109,12 +108,12 @@ const Login = () => {
             </div>
             <div className='flex flex-col m-auto w-[79%]'>
                 <div className=" items-center mb-3 p-2 mx-2 phoneno flex  bg-[#f1f1f1] rounded-md ">
-                    <img src={asset0} alt="user" className='h-5 border-r-2 pr-2 border-solid border-gray-300' />
+                    <img src={asset0} alt="user" className='h-5 border-r-[1px] pr-2 border-solid border-gray-300' />
                     <input value={mobno} onChange={(e) => setmobno(e.target.value)} type="text" placeholder='Phone number' name="phone_no" id="phone_no" className='placeholder:text-gray-500 pl-1 bg-[#f1f1f1]  outline-none overflow-x-scroll' />
                 </div>
 
                 <div className=" items-center p-2 mx-2 passowrd flex  bg-[#f1f1f1] rounded-md ">
-                    <img src={asset1} alt="user" className='h-5 border-r-2 pr-2 border-solid border-gray-300' />
+                    <img src={asset1} alt="user" className='h-5 border-r-[1px] pr-2 border-solid border-gray-300' />
                     <input value={pwd} onChange={(e) => setpwd(e.target.value)} type="password" placeholder='Login password' name="password" id="pwrd" className=' placeholder:text-gray-500 pl-1 bg-[#f1f1f1] outline-none overflow-x-scroll' />
                 </div>
                 {/*[#0096D5] */}
