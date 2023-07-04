@@ -207,9 +207,9 @@ const Team = () => {
 
 
         <div className="flex items-center w-full font-[300]">
-          <div className={`${currentVisible === 'level1' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-gray-200 text-gray-600'} p-2 text-center text-md w-1/3 font-normal`} onClick={e => setCurrentVisible('level1')}>First</div>
-          <div className={`${currentVisible === 'level2' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-gray-200 text-gray-600'} p-2 text-center text-md w-1/3 font-normal`} onClick={e => setCurrentVisible('level2')}>Second</div>
-          <div className={`${currentVisible === 'level3' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-gray-200 text-gray-600'} p-2 text-center text-md w-1/3 font-normal`} onClick={e => setCurrentVisible('level3')}>Third</div>
+          <div className={`${currentVisible === 'level1' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.05rem] border-l-[0.5px] border-r-[0.5px] border-[#ccc] text-gray-600'} p-2 text-center text-md w-1/3 font-normal`} onClick={e => setCurrentVisible('level1')}>First</div>
+          <div className={`${currentVisible === 'level2' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.05rem] border-l-[0.5px] border-r-[0.5px] border-[#ccc] text-gray-600'} p-2 text-center text-md w-1/3 font-normal`} onClick={e => setCurrentVisible('level2')}>Second</div>
+          <div className={`${currentVisible === 'level3' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.05rem] border-l-[0.5px] border-r-[0.5px] border-[#ccc] text-gray-600'} p-2 text-center text-md w-1/3 font-normal`} onClick={e => setCurrentVisible('level3')}>Third</div>
         </div>
 
         {currentVisible === 'level1' && (
