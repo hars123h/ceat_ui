@@ -345,10 +345,10 @@ const Home = () => {
                                 Sign Up to get 50rs <br />
                                 Commission bonus up to 30% <br />
                                 Register to send 100rs <br />
-                                Level 1 22%<br />
-                                Level 2 2%<br />
-                                Level 3 1%<br />
-                                withdrawal time from 00:30 am to 19:00 pm <br />
+                                Level 1 20%<br />
+                                Level 2 3%<br />
+                                Level 3 2%<br />
+                                withdrawal time from 09:00 am to 18:00 pm <br />
                                 Minimum withdrawal 150rs
                             </div>
 
