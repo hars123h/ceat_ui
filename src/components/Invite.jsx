@@ -116,8 +116,8 @@ const Invite = () => {
 
                 <div className="info w-1/2 p-3 sm:text-xs md:text-md flex flex-col rounded-2xl bg-white text-black font-bold mt-5">
                     <div className='font-bold text-sm'>Invitation Link</div>
-                    <div className='py-1 px-1 text-xs rounded-md border overflow-hidden border-red-800 mt-2'>{`https://ceat-ui.vercel.app/register/invite_code/${userDetails.user_invite}`}</div>
-                    <CopyToClipboard text={`https://ceat-ui.vercel.app/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('copy success')}>
+                    <div className='py-1 px-1 text-xs rounded-md border overflow-hidden border-red-800 mt-2'>{`https://www.electricboat4s.website/register/invite_code/${userDetails.user_invite}`}</div>
+                    <CopyToClipboard text={`https://www.electricboat4s.website/register/invite_code/${userDetails.user_invite}`} onCopy={() => toaster('copy success')}>
                         <span className='w-[80px] text-sm text-center bg-red-800 text-white p-2'>copy</span>
                     </CopyToClipboard>
                 </div>
@@ -136,7 +136,7 @@ const Invite = () => {
                 <QRCode
                     size={140}
                     style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                    value={`https://ceat-ui.vercel.app/register/invite_code/${userDetails.user_invite}`}
+                    value={`https://www.electricboat4s.website/register/invite_code/${userDetails.user_invite}`}
                     viewBox={`0 0 120 120`}
                 />
                 <div className='text-red-800 font-extrabold text-center mt-1'>QR code</div>
