@@ -73,8 +73,86 @@ const Team = () => {
 
   if (loading || userDetails === null) {
     return (
-      <div className='h-screen grid place-items-center'>
-        <div>Loading...</div>
+      <div className='bg-white'>
+        {/* [#2e9afe] */}
+        <div className="top flex items-center my-auto text-center h-[44px] p-1 bg-red-800 text-white text-md font-medium">
+          <div className='absolute flex w-32 cursor-pointer' onClick={() => navigate(-1)}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4  storke-white  cursor-pointer">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </div>
+          <div className='flex-grow'>My Team</div>
+        </div>
+
+        <div className="flex flex-row justify-between items-center p-2 border-b border-gray-300" >
+          <div className='flex flex-row justify-between items-center flex-grow mx-2'>
+            <input type="date" name="date_from" id="date_from"
+              className=' outline-none rounded-full bg-gray-100 py-[2px] w-[100px]' />
+            <div className='font-medium mx-1'>to</div>
+            <input type="date" name="date_from" id="date_from"
+              className='outline-none rounded-full bg-gray-100 py-[2px] w-[100px]' />
+          </div>
+          <div>
+            <button className="bg-red-800 text-white text-xs px-2 rounded-full py-[3px] flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                className="w-3 h-3 stroke-white">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
+              <div>search for</div>
+            </button>
+          </div>
+        </div>
+        {/*userDetails.directRecharge * (amountDetails.level1_percent) / 100) + (userDetails.indirectRecharge * (amountDetails.level2_percent) / 100) + (userDetails.in_indirectRecharge * (amountDetails.level3_percent) / 100 */}
+        <div className="flex border-b border-gray-300">
+          <div className="flex flex-col w-1/3 pt-2 pb-4 px-2 border-r border-gray-300">
+            <div className='text-gray-500 text-[10px] leading-3 mt-1'>Team assets (&#8377;)</div>
+            <div className='text-[#4169e1] text-xl mt-1'>&#8377;0</div>
+          </div>
+          <div className="flex flex-col w-1/3 pt-2 pb-4 px-2 border-r border-gray-300">
+            <div className='text-gray-500 text-[10px] leading-3 mt-1'>Team recharge (&#8377;)</div>
+            <div className='text-[#4169e1] text-xl mt-1'>&#8377;0</div>
+          </div>
+          <div className="flex flex-col w-1/3 pt-2 pb-4 px-2">
+            <div className='text-gray-500 text-[10px] leading-3 mt-1'>Team Number</div>
+            <div className='text-[#4169e1] text-xl mt-1'>0</div>
+          </div>
+        </div>
+
+        <div className='flex flex-col items-center w-full   bg-white '>
+
+
+          <div className="flex items-center w-full font-[300]">
+            <div className={`${currentVisible === 'level1' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-gray-200 text-gray-600'} p-2 text-center text-md w-1/3 font-semibold`} onClick={e => setCurrentVisible('level1')}>First</div>
+            <div className={`${currentVisible === 'level2' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-gray-200 text-gray-600'} p-2 text-center text-md w-1/3 font-semibold`} onClick={e => setCurrentVisible('level2')}>Second</div>
+            <div className={`${currentVisible === 'level3' ? 'text-red-700 border-b-2 border-red-700' : 'border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-gray-200 text-gray-600'} p-2 text-center text-md w-1/3 font-semibold`} onClick={e => setCurrentVisible('level3')}>Third</div>
+          </div>
+
+
+        </div>
+        <div className="fixed bottom-0 z-10 bg-gray-50 rounded-none text-gray-700  flex overflow-x-hidden  mx-auto mt-2 border-2 border-gray-100 w-full overflow-y-hidden">
+          <div className="flex flex-row justify-around font-normal text-sm items-center w-full py-1">
+            <div className=' cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/home')}>
+              <img src={asset5} alt="online" className='w-7' />
+              <div>Home</div>
+            </div>
+
+            <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/invite')}>
+              <img src={asset6} alt="recharge" className='w-7' />
+              <div>Invite</div>
+            </div>
+            <div className='cursor-pointer mx-2 flex flex-col justify-center items-center ' onClick={() => navigate('/team')}>
+              <img src={asset7} alt="app_dwd" className='w-7' />
+              <div>Team</div>
+            </div>
+
+
+            <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/mine')}>
+              <img src={asset8} alt="invite" className='w-7' />
+              <div>My</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     )
   }
@@ -236,7 +314,7 @@ const Team = () => {
       </div>
       <div className="fixed bottom-0 z-10 bg-gray-50 rounded-none text-gray-700  flex overflow-x-hidden  mx-auto mt-2 border-2 border-gray-100 w-full overflow-y-hidden">
         <div className="flex flex-row justify-around font-normal text-sm items-center w-full py-1">
-          <div className=' cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={()=>navigate('/home')}>
+          <div className=' cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/home')}>
             <img src={asset5} alt="online" className='w-7' />
             <div>Home</div>
           </div>

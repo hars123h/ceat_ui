@@ -236,16 +236,137 @@ const Mine = () => {
 
   if (loading) {
     return (
-      <div className='flex flex-col justify-center items-center  h-screen bg-gray-50 z-10 opacity-90'>
-        <RotatingLines
-          strokeColor="grey"
-          strokeWidth="2"
-          animationDuration="0.75"
-          width="40"
-          visible={true}
-        />
-        <div>Loading...</div>
+      <div className='relative h-screen bg-white'>
+      <div>
+        <ReactModal
+          isOpen={logout_popup}
+          style={customStyles2}
+          contentLabel="Notice"
+          ariaHideApp={false}
+        >
+          <div className='w-full  shadow-xl z-10 border border-gray-200'>
+            <div className='flex gap-2 flex-col bg-white w-full '>
+              <div className=' text-lg px-3  py-3'>Are you sure to log out?</div>
+              <div className="flex text-blue-400 justify-end">
+                <div className='text-center w-[80px]  text-gray-400   font-semibold p-2'
+                  onClick={(e) => {
+                    setLogout_popup(false);
+                  }}>
+                  no
+                </div>
+                <div className='text-center w-[80px]  font-semibold p-2'
+                  onClick={(e) => {
+                    setLogout_popup(false);
+                    handleSignOut();
+                  }}>
+                  Ok
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </ReactModal>
       </div>
+
+
+      <div className="flex flex-col bg-white gap-1">
+        <div className='flex  justify-start items-center p-3 mt-2 ml-3'>
+          <img src={boat_logo} alt="wind_login" width={75} className="bg-white py-2  rounded-full" />
+          <div className='text-[26px] ml-6'>
+            {/* <span className='border border-red-700 px-1 text-red-700 rounded-xl text-xs'>LV0</span> */}
+          </div>
+        </div>
+
+        <div className='flex shadow-myShadow flex-row w-full justify-between px-4 text-white items-center h-[104px] rounded-lg bg-red-800'>
+
+          <div className="flex flex-col justify-center items-center gap-1 h-full">
+            <div>Assets</div>
+            <div className='text-xs'>0</div>
+          </div>
+
+          <div className="flex flex-col justify-center items-center gap-1  h-full">
+            <div>Recharge</div>
+            <div className='text-xs'>0</div>
+          </div>
+
+          <div className="flex flex-col  h-full justify-center items-center gap-1">
+            <div>Income</div>
+            <div className='text-xs'>0</div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div className='grid grid-cols-2 grid-rows-3 px-2 gap-2 py-3 mt-2'>
+
+        <div className='flex flex-col gap-[2px] items-center bg-[#f3f3f3] py-2' >
+          <div>
+            <img src={ceat_company} width={50} />
+          </div>
+          <div className='font-bold'>Company</div>
+        </div>
+
+        <div className='flex flex-col gap-[2px] items-center bg-[#f3f3f3] py-2' >
+          <div>
+            <img src={personal_information} width={50} />
+          </div>
+          <div className='font-bold'>personal information</div>
+        </div>
+
+        <div className='flex flex-col gap-[2px] items-center bg-[#f3f3f3] py-2' >
+          <div>
+            <img src={plan_details}  width={50} />
+          </div>
+          <div className='font-bold'>Plan Details</div>
+        </div>
+
+        <div className='flex flex-col gap-[2px] items-center bg-[#f3f3f3] py-2' >
+          <div>
+            <img src={account_record} width={50} />
+          </div>
+          <div className='font-bold'>Account Record</div>
+        </div>
+
+        <div className='flex flex-col gap-[2px] items-center bg-[#f3f3f3] px-6 py-2 center-box'>
+          <div>
+            <img src={app_download} width={50} />
+          </div>
+          <div className='font-bold'>APP download</div>
+        </div>
+
+      </div>
+
+
+      <div onClick={() => setLogout_popup(true)} className="flex flex-row justify-center text-xl
+        w-[80%] mx-auto py-1 mt-10 text-center rounded-md bg-red-800 text-white font-semibold">
+        <div>Sign out</div>
+      </div>
+
+      <div className="fixed bottom-0 z-10 bg-gray-50 rounded-none text-gray-700  flex overflow-x-hidden  mx-auto mt-2 border-2 border-gray-100 w-full overflow-y-hidden">
+        <div className="flex flex-row justify-around font-normal text-sm items-center w-full py-1">
+          <div className=' cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/home')}>
+            <img src={asset5} alt="online" className='w-7' />
+            <div>Home</div>
+          </div>
+
+          <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/invite')}>
+            <img src={asset6} alt="recharge" className='w-7' />
+            <div>Invite</div>
+          </div>
+          <div className='cursor-pointer mx-2 flex flex-col justify-center items-center ' onClick={() => navigate('/team')}>
+            <img src={asset7} alt="app_dwd" className='w-7' />
+            <div>Team</div>
+          </div>
+
+
+          <div className='cursor-pointer mx-2 flex flex-col justify-center items-center' onClick={() => navigate('/mine')}>
+            <img src={asset8} alt="invite" className='w-7' />
+            <div>My</div>
+          </div>
+        </div>
+      </div>
+    </div>
     )
   }
 
