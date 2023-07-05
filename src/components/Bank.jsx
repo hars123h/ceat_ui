@@ -81,32 +81,32 @@ const Bank = () => {
             </div>
             {/* #757575 */}
             <div className="box mx-3 bg-white text-black p-2  mt-1 gap-1 flex flex-col">
-                <div className='flex gap-2 items-center bg-[#f9f9f9] rounded-sm  text-md p-3 m-1  cursor-pointer'>
+                <div className='flex gap-2 items-center bg-[#f9f9f9] rounded-sm  text-[15px] p-3 m-1  cursor-pointer'>
                     <input type="text" onChange={handleChange} name='fullName' value={details.fullName} 
                     className='outline-none text-bank_color font-semibold  w-full bg-inherit placeholder-gray-500' placeholder='Full name' />
                 </div>
 
-                <div className='flex gap-2 items-center bg-[#f9f9f9] text-md p-3 m-1  cursor-pointer'>
+                <div className='flex gap-2 items-center bg-[#f9f9f9] text-[15px] p-3 m-1  cursor-pointer'>
                     <input type="text" onChange={handleChange} name='phoneNo' value={details.phoneNo} 
                     className='outline-none text-bank_color font-semibold w-full bg-inherit placeholder-gray-500' placeholder='Phone number' />
                 </div>
 
-                <div className='flex gap-2 items-center bg-[#f9f9f9] text-md p-3 m-1  cursor-pointer'>
+                <div className='flex gap-2 items-center bg-[#f9f9f9] text-[15px] p-3 m-1  cursor-pointer'>
                     <input type="text" onChange={handleChange} name='bankAccount' value={details.bankAccount} 
                     className='outline-none text-bank_color font-semibold w-full bg-inherit placeholder-gray-500' placeholder='Bank Account' />
                 </div>
 
-                <div className='flex gap-2 items-center bg-[#f9f9f9] text-md p-3 m-1  cursor-pointer'>
+                <div className='flex gap-2 items-center bg-[#f9f9f9] text-[15px] p-3 m-1  cursor-pointer'>
                     <input type="text" onChange={handleChange} name='bankName' value={details.bankName} 
                     className='outline-none text-bank_color font-semibold w-full bg-inherit placeholder-gray-500' placeholder='Bank name' />
                 </div>
 
-                <div className='flex gap-2 items-center bg-[#f9f9f9] text-md p-3 m-1  cursor-pointer'>
+                <div className='flex gap-2 items-center bg-[#f9f9f9] text-[15px] p-3 m-1  cursor-pointer'>
                     <input type="text" onChange={handleChange} name='ifsc' value={details.ifsc} 
                     className='outline-none text-bank_color font-semibold w-full bg-inherit placeholder-gray-500' placeholder='IFSC' />
                 </div>
 
-                <div className='flex gap-2 items-center bg-[#f9f9f9] text-md p-3 m-1  cursor-pointer'>
+                <div className='flex gap-2 items-center bg-[#f9f9f9] text-[15px] p-3 m-1  cursor-pointer'>
                     <input type="text" onChange={(e) => setPwd(e.target.value)} name='wpwd' value={wpwd} 
                     className='outline-none text-bank_color font-semibold  w-full bg-inherit placeholder-gray-500' placeholder='Withdrawal password' />
                 </div>

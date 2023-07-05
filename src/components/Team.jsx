@@ -188,12 +188,12 @@ const Team = () => {
         </div>
       </div>
       {/*userDetails.directRecharge * (amountDetails.level1_percent) / 100) + (userDetails.indirectRecharge * (amountDetails.level2_percent) / 100) + (userDetails.in_indirectRecharge * (amountDetails.level3_percent) / 100 */}
-      <div className="flex border-b border-gray-200">
-        <div className="flex flex-col w-1/3 pt-2 pb-4 px-2 border-r border-gray-300">
+      <div className="flex border-b-[0.5px] border-gray-200">
+        <div className="flex flex-col w-1/3 pt-2 pb-4 px-2 border-r-[0.5px] border-gray-300">
           <div className='text-gray-500 text-[10px] leading-3 mt-1'>Team assets (&#8377;)</div>
           <div className='text-[#4169e1] text-xl mt-1'>&#8377;{Math.floor(assetValue)}</div>
         </div>
-        <div className="flex flex-col w-1/3 pt-2 pb-4 px-2 border-r border-gray-300">
+        <div className="flex flex-col w-1/3 pt-2 pb-4 px-2 border-r-[0.5px] border-gray-300">
           <div className='text-gray-500 text-[10px] leading-3 mt-1'>Team recharge (&#8377;)</div>
           <div className='text-[#4169e1] text-xl mt-1'>&#8377;{Math.floor(userDetails.directRecharge + userDetails.indirectRecharge + userDetails.in_indirectRecharge)}</div>
         </div>
