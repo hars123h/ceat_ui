@@ -22,15 +22,15 @@ const Card = ({ pre_sale, long_plan_state, product_type, product_image, plan_nam
         <div className=' w-full grid grid-cols-2 p-1 mt-2 gap-2 text-[13px]'>
           <div className="basic_info  text-white flex justify-start gap-1 bg-red-800  py-3 px-2 mx-1">
             <div className='font-bold'>Price: </div>
-            <div className=' text-white font-bold'>&#8377;{new Intl.NumberFormat().format(plan_amount)}</div>
+            <div className=' text-white font-bold'>&#8377;{plan_amount}</div>
           </div>
           <div className="basic_info text-white flex justify-start gap-1 bg-red-800 py-3  mx-1">
             <div className='font-bold'>Daily Income: </div>
-            <div className='text-white font-bold'>&#8377;{new Intl.NumberFormat().format(plan_daily_earning)}</div>
+            <div className='text-white font-bold'>&#8377;{plan_daily_earning}</div>
           </div>
           <div className="basic_info text-white flex justify-start gap-1 bg-red-800 py-3 px-2 mx-1">
             <div className='font-bold'>Total Income: </div>
-            <div className='text-white font-bold'>&#8377;{new Intl.NumberFormat().format(plan_cycle * plan_daily_earning)}</div>
+            <div className='text-white font-bold'>&#8377;{plan_cycle * plan_daily_earning}</div>
           </div>
           <div className="basic_info text-white flex justify-start gap-1 bg-red-800 py-3  mx-1">
             <div className='font-bold'>Complete Cycle:</div>
