@@ -68,7 +68,8 @@ const RechargeWindow = () => {
                 grand_parent_id: userDetails.grand_parent_id ? userDetails.grand_parent_id : '',
                 great_grand_parent_id: userDetails.great_grand_parent_id ? userDetails.great_grand_parent_id : ''
             }).then((response) => {
-                if(response.data.message='refno already exists') {
+                console.log(response.data);
+                if(response.data.message==='refno already exists') {
                     toaster('RefNo already exists');
                     setRefno('');
                     console.log('RefNo already exists');
