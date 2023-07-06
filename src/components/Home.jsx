@@ -207,7 +207,7 @@ const Home = () => {
         } else if (quantity <= 0) {
             toaster('Please a positive value!');
         } else {
-            if ((Number(quantity) * Number(currPlan.plan_amount)) > Number(userDetails.balance)) {
+            if ((Number(quantity) * Number(currPlan.plan_amount)) > Number(userDetails.recharge_amount)) {
                 //toaster("The available balance is insufficient, please recharge");
                 setBalanceIndicator(true);
                 setTimeout(() => {
@@ -215,10 +215,14 @@ const Home = () => {
                 }, 3000);
             } else {
                 await axios.post(`${BASE_URL}/purchase`, {
-                    balance: Number(userDetails.balance) - Number(Number(quantity) * Number(currPlan.plan_amount)),
+                    recharge_amount: Number(userDetails.recharge_amount) - Number(Number(quantity) * Number(currPlan.plan_amount)),
                     boughtLong: (currPlan.product_type === 'long' ? 1 : 0),
                     boughtShort: (currPlan.product_type === 'short' ? 1 : 0),
                     user_id: localStorage.getItem('uid'),
+                    parent_id:userDetails.parent_id,
+                    grand_parent_id:userDetails.grand_parent_id,
+                    great_grand_parent_id:userDetails.great_grand_parent_id,
+                    plan_price: currPlan.plan_amount,
                     plans_purchased: {
                         ...currPlan,
                         quantity: quantity,
