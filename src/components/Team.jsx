@@ -65,6 +65,16 @@ const Team = () => {
   //   console.log(datas);
   // }
 
+  const userTotalPlanBalance = (userinfo) => {
+    let total_plan_amount = 0;
+    if(userinfo.hasOwnProperty('plans_purchased')) {
+      for(let i = 0;i<userinfo.plans_purchased.length;i++) {
+        total_plan_amount+=userinfo.plans_purchased[i].plan_amount;
+      }
+    }
+    return total_plan_amount;
+  }
+
   useLayoutEffect(() => {
     getUserDetails().then(() => {
       setLoading(false);
@@ -229,7 +239,7 @@ const Team = () => {
                     <img src={boat_logo} alt="turbo_logo" width={70} className='m-1' />
                     <div className='text-sky-500 flex flex-col'>
                       <div className='text-gray-700'>Name: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div>Recharge: {(element.recharge_amount)}</div>
+                      <div>Recharge: {userTotalPlanBalance(element)}</div>
                       <div>withdraw:
                         {element.withdrawal_sum}
                       </div>
@@ -264,7 +274,7 @@ const Team = () => {
                     <img src={boat_logo} alt="turbo_logo" width={80} className='m-1' />
                     <div className='text-sky-500 flex flex-col'>
                       <div className='text-gray-700'>Name: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div>Recharge: {(element.recharge_amount)}</div>
+                      <div>Recharge: {userTotalPlanBalance(element)}</div>
                       <div>withdraw: {element.withdrawal_sum}</div>
                     </div>
                     <div className='flex flex-col items-end flex-grow'>
@@ -296,7 +306,7 @@ const Team = () => {
                     <img src={boat_logo} alt="turbo_logo" width={80} className='m-1' />
                     <div className='text-sky-500 flex flex-col'>
                       <div className='text-gray-700'>Name: {String(element.mobno).substring(0, 3) + "****" + String(element.mobno).substring(7)}</div>
-                      <div>Recharge: {(element.recharge_amount)}</div>
+                      <div>Recharge: {userTotalPlanBalance(element)}</div>
                       <div>withdraw: {element.withdrawal_sum}</div>
                     </div>
                     <div className='flex flex-col  items-end flex-grow'>
